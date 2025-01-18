@@ -1,9 +1,7 @@
-import userData from "./userData.json";
-import friends from "./friends.json";
-import transaction from "./transaction.json";
-import Profile from "./components/Profile";
-import FriendsList from "./components/FriendsList";
-import TransactionHistory from "./components/TransactionHistory";
+import Profile from "../Profile/Profile.jsx";
+import FriendsList from "../FriendList/FriendList.jsx";
+import userData from "../../data/userData.json";
+import friends from "../../data/friends.json";
 
 function App() {
   return (
@@ -22,10 +20,7 @@ function App() {
           likes: userData.stats.likes,
         }}
       />
-
       <FriendsList friends={friends} />
-
-      <TransactionHistory items={transaction} />
     </div>
   );
 }
